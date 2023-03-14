@@ -1,5 +1,4 @@
 # CAP-C-in-Arabidopsis
--
 The following instructions describe the pipeline used to process Arabidopsis CAP-C libraries in the manuscript. 
 
 ## Dependencies and Prerequisites
