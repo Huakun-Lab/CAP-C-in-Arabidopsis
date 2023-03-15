@@ -12,7 +12,7 @@ mkdir -p 20-split
 mkdir -p 21-merge
 mkdir -p 02-cutadapt
 mkdir -p 03-after_filter
-mkdir -p 04-fastq
+mkdir -p 04-fastq/CAPC
 
 ## Step 1 Split raw fastq file ##
 
@@ -71,6 +71,6 @@ done
 
 ## Step 6 Combine all fastq ##
 
-cat 03-after_filter/CAPC*{OK,Short}_R1*.fastq.gz > 04-fastq/CAPC_merged_R1.fastq.gz
-cat 03-after_filter/CAPC*{OK,Short}_R2*.fastq.gz > 04-fastq/CAPC_merged_R2.fastq.gz
+cat 03-after_filter/CAPC*{OK,Short}_R1*.fastq.gz > 04-fastq/CAPC/CAPC_merged_R1.fastq.gz
+cat 03-after_filter/CAPC*{OK,Short}_R2*.fastq.gz > 04-fastq/CAPC/CAPC_merged_R2.fastq.gz
 
