@@ -43,3 +43,16 @@ When the Bash Script finished. You can remove folder `02-cutadapt`, `03-after_fi
 The clean fastq was storage in `04-fastq`.
 
 ## General Instructions to use the bash script
+This bash script is used to clean the raw sequencing fastq, then you can use the clean fastq to mapping.
+### Step1 Split raw fastq file
+Since the software SeqPrep used in the third step generally only performs single-threaded calculations, the original FASTQ files should be split into smaller FASTQ files first.
+### Step 2 Zip Split fastq file
+In order to reduce storage usage, compress the split FASTQ files. The software used is Pigz, which can perform multi-threaded compression on sequencing files, speeding up data processing.
+### Step 3 Merge R1 and R2 
+Use SeqPrep to merge the FASTQ reads.
+### Step 4 Remove Linker
+Remove the linker sequences from the reads and regenerate the FASTQ files.
+### Step 5 Sum Split and filted
+Filter the regenerated FASTQ files.
+### Step 6 Combine all fastq
+Reassemble the filtered FASTQ files into clean FASTQ files for the next step of mapping.

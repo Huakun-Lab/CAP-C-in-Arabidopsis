@@ -41,7 +41,7 @@ do
 	-2 21-merge/CAPC_unmerged_R2_$i\.fastq.gz
 done
 
-## Step 4  Remove Linker ##
+## Step 4 Remove Linker ##
 
 for i in `ls 20-split/$REP\_R1* | sed 's/_/\t/g' | sed 's/\./\t/g' | awk '{print $3}'`
 do
