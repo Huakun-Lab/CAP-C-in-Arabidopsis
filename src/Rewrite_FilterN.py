@@ -1,3 +1,4 @@
+# Modified from https://github.com/ouyang-lab/CAPC/tree/master/src/filter_N.py
 #!/python
 # -- coding: utf-8 --
 import gzip
